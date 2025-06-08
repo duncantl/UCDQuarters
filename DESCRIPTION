@@ -1,0 +1,10 @@
+Package: UCDQuarters
+Version: 0.1-0
+Title: Get the current and historical quarter dates for UC Davis
+Description: Scrapes the registrar's page(s) for information about quarter start and end dates.
+Author: Duncan Temple Lang
+Maintainer: DTL <dtemplelang@ucdavis.edu>
+Imports: XML
+
+
+
