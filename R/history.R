@@ -1,3 +1,4 @@
+#
 getQuarterInfo =
 function(u = "https://registrar.ucdavis.edu/calendar/archive/quarter")
 {
@@ -8,6 +9,7 @@ function(u = "https://registrar.ucdavis.edu/calendar/archive/quarter")
     dates = lapply(y, doYear)
     quarters = do.call(rbind, dates)
     quarters$term = ordered(quarters$term, rev(quarters$term))
+    rownames(quarters) = NULL
     quarters
 }
 
