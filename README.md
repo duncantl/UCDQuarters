@@ -1,5 +1,13 @@
 # Compute UCD Quarter Dates
 
+To get the quarter information for the current  year, next year and previous years,
+use `quarters()`, i.e.,
+```
+qa = quarters()
+```
+
+To get the dates for just the current and historical quarters, use `getQuarterInfo()`, e.g.,
+
 ```r
 q = UCDQuarters::getQuarterInfo()
 ```
@@ -29,4 +37,9 @@ dateToTerm(as.Date("2024-01-05"), q)
 ```
 
 
+## All previous quarters up to a given Date
+
+```
+earlierQuarters(as.Date("2025/1/23"), q)
+```
 
