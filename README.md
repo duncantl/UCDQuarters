@@ -19,3 +19,14 @@ The result is a data.frame with 3 columns:
 ```
 
 
+##  Mapping a date to a term code
+
+```r
+dateToTerm(as.Date("2024-01-05"), q)
+```
+```
+[1] "202501"
+```
+
+
+
