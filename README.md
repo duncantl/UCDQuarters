@@ -1,3 +1,12 @@
+#
+
+A pre-computed data.frame with all the quarter dates and term code for
+AY 2025-2026 through 2012-2013 is available via
+```
+data(quarters)
+```
+
+
 # Compute UCD Quarter Dates
 
 To get the quarter information for the current  year, next year and previous years,
