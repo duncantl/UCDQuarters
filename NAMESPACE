@@ -1,2 +1,5 @@
 import(XML)
 export(getQuarterInfo)
+export(dateToTerm)
+export(earlierQuarters)
+
