@@ -1,2 +1,5 @@
-+ Get the current and future terms 
-+ combine historic and future dates and save as data/
++ √ Get the current and future terms 
+   + specify different URL to getQuarterInfo()
++ √ combine historic and future dates 
+   + quarters()
++ save as data/ so don't need network connection

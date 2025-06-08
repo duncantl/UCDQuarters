@@ -1,5 +1,22 @@
 #
+
+quarters =
+function()    
+{
+   info = lapply(c("https://registrar.ucdavis.edu/calendar/quarter",
+                   "https://registrar.ucdavis.edu/calendar/archive/quarter"),
+                 getQuarterInfo)
+   ans = rbind(info[[1]], info[[2]])
+   ans = ans[!duplicated(ans$start),]
+   ans$term = ordered(ans$term, rev(ans$term))
+   ans
+}
+
+
 getQuarterInfo =
+   # Can also point it to the URL for the current and future AY
+   # getQuarterInfo("https://registrar.ucdavis.edu/calendar/quarter")
+   #
 function(u = "https://registrar.ucdavis.edu/calendar/archive/quarter")
 {
     doc = htmlParse(readLines(u))
@@ -8,6 +25,7 @@ function(u = "https://registrar.ucdavis.edu/calendar/archive/quarter")
 
     dates = lapply(y, doYear)
     quarters = do.call(rbind, dates)
+    quarters = quarters[order(quarters$start, decreasing = TRUE), ]
     quarters$term = ordered(quarters$term, rev(quarters$term))
     rownames(quarters) = NULL
     quarters
